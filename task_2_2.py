@@ -1,19 +1,14 @@
-user_time = int(input("введте время в секундах"))
-hours = 0
-minutes = 0
-seconds = 0
+i = int(input('сколько элементов будет в списке?'))
+my_list = []
 
-while True:
-    if user_time > 3600:
-        hours += 1
-        user_time -= 3600
-        continue
-    elif user_time > 60:
-        minutes += 1
-        user_time -= 60
+while i > 0:
+    my_list.append(int(input('введите число')))
+    i -= 1
+
+for j in range(len(my_list)):
+    if j % 2 == 0:
         continue
     else:
-        seconds = user_time
-        break
+        my_list[j - 1], my_list[j] = my_list[j], my_list[j - 1]
 
-print("{:0>2}:{:0>2}:{:0>2}".format(hours, minutes, seconds))
+print(my_list)

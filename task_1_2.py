@@ -1,11 +1,3 @@
-a = 'добрый день'
-g = 'введите два числа'
-print(f'{a} \n{g}')
-b = int(input())
-c = int(input())
-
-z = b
-b = c
-c = z
-
-print('вуаля! они поменялись местами(понятно только в коде но вы мне поверьте:)')
+my_list = [True, "abc", 1, [1, 2], (3, 4)]
+for i in range(len(my_list)):
+    print(type(my_list[i]))

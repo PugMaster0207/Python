@@ -1,10 +1,4 @@
-a = int(input('введите ваше число'))
-max_dig = 0
-
-while a > 0:
-    dig = a % 10
-    a //= 10
-    if max_dig < dig:
-        max_dig = dig
-
-print(f'{max_dig} самая большая цифра в числе')
+user_str = input('введите предложение ')
+user_str_list = user_str.split(" ")
+for i in range(user_str.count(" ") + 1):
+    print(user_str_list[i][:10])
